@@ -1,0 +1,16 @@
+aca estan guardados los datos basicos de la api como los modelos de los objetos
+y los endpoints
+los requisitos para que esta api te funcione son 
+
+el archivo inventario_de_inventos
+el archivo modelos 
+el archivo main
+
+y las dependencias para poder correrlo en local son
+
+FASTAPÍ =["STANDARD"]
+y pydantic mas especificamente.
+
+aclaracion para los que quieran usar este codigo todo esto es amateur asi que si hay algo mal codeado o no funciona en tu deploy hace la sugerencia 
+en la pestaña de issues de github no seas salame 
+atte juan de zan dueño del repo
