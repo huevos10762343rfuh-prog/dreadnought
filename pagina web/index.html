@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>gnomo / github-del-gnomo</title>
+  <link rel="icon" href="img/logo.jpg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- barra de arriba -->
+  <div id="barra">
+    <img id="logo" src="img/logo.jpg" alt="Logo del github del gnomo">
+    <span id="tituloBarra">Github del gnomo</span>
+    <div class="clear"></div>
+  </div>
+
+  <div id="contenedor">
+
+    <!-- titulo del "repo" -->
+    <h1 id="tituloRepo">
+      <span class="gris">gnomo</span> / <b>github-del-gnomo</b>
+      <span class="badge">Public</span>
+    </h1>
+
+    <!-- pestañas (de adorno, no hacen nada) -->
+    <div id="tabs">
+      <span class="tab tabActiva">Code</span>
+      <span class="tab">Issues</span>
+      <span class="tab">Pull requests</span>
+      <span class="tab">Actions</span>
+      <div class="clear"></div>
+    </div>
+
+    <!-- buscador -->
+    <form id="form-buscar">
+      <input id="buscar-id" type="number" min="1" placeholder="Go to file (id)..." aria-label="Buscar por id">
+      <button type="submit" class="botonGris">Buscar</button>
+      <button type="button" id="btn-todos" class="botonGris">Ver todo</button>
+    </form>
+
+    <p id="aviso" role="status" aria-live="polite"></p>
+
+    <!-- lista de archivos: ui.js la llena -->
+    <div class="caja">
+      <div class="cajaTitulo"><b>gnomo</b> <span class="gris">·</span> <span id="contador">0 archivos</span></div>
+      <ul id="lista"></ul>
+    </div>
+
+    <!-- formulario para agregar -->
+    <h3 class="tituloForm">Create new file</h3>
+    <form id="form-nuevo" class="caja cajaForm">
+      <label for="tipo">Tipo</label>
+      <select id="tipo">
+        <option value="materiales">Material</option>
+        <option value="planos">Plano</option>
+        <option value="proyectos">Proyecto</option>
+      </select>
+
+      <label for="nombre">Nombre</label>
+      <input id="nombre" required>
+
+      <label for="imagen">Imagen (URL)</label>
+      <input id="imagen" type="url" placeholder="https://...">
+
+      <label for="precio">Precio</label>
+      <input id="precio" type="number" min="0" step="1" value="0">
+
+      <!-- estos dos son solo para materiales -->
+      <div id="campos-material">
+        <label for="espec">Especificación</label>
+        <input id="espec">
+
+        <label for="cantidad">Cantidad</label>
+        <input id="cantidad" type="number" min="0" step="1" value="1">
+      </div>
+
+      <button type="submit" class="botonVerde">Commit new file</button>
+    </form>
+
+  </div>
+
+  <script src="api.js"></script>
+  <script src="ui.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
